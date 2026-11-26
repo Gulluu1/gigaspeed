@@ -24,3 +24,66 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* GigaSpeed Custom Styles */
+.gigaspeed-bg {
+  background: linear-gradient(135deg, #e0e7ff 0%, #faf5ff 50%, #fdf4ff 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #d946ef 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #ec4899 100%);
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 50%, #db2777 100%);
+}
+
+.gauge-gradient {
+  background: conic-gradient(from -90deg, #e0e7ff 0%, #f3e8ff 25%, #fce7f3 50%, #fae8ff 75%, #e0e7ff 100%);
+}
+
+/* Card accent colors */
+.download-accent {
+  border-top: 4px solid #0ea5e9;
+}
+
+.upload-accent {
+  border-top: 4px solid #10b981;
+}
+
+.ping-accent {
+  border-top: 4px solid #f59e0b;
+}
+
+/* Canvas graph styles */
+.speed-graph {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+/* Animation for gauge needle */
+@keyframes gauge-fill {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: var(--dash-offset); }
+}
+
+.gauge-progress {
+  animation: gauge-fill 1s ease-out forwards;
+}
+
+/* Pulse animation for testing state */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
